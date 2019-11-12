@@ -47,11 +47,11 @@ def parse_star_parameters(line, star):
     params = line.split()
     star.R = int(params[1])
     star.color = params[2]
-    star.m = int(params[3])
-    star.x = int(params[4])
-    star.y = int(params[5])
-    star.Vx = int(params[6])
-    star.Vy = int(params[7])
+    star.m = float(params[3])
+    star.x = float(params[4])
+    star.y = float(params[5])
+    star.Vx = float(params[6])
+    star.Vy = float(params[7])
 
 
 def parse_planet_parameters(line, planet):
