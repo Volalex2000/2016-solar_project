@@ -1,4 +1,4 @@
-# coding: utf-8
+﻿# coding: utf-8
 # license: GPLv3
 
 """Модуль визуализации.
@@ -53,7 +53,7 @@ def scale_y(y):
 
     **y** — y-координата модели.
     """
-
+    #README Проверка создания ветки и работа на ней
     return y  # FIXME: not done yet
 
 
