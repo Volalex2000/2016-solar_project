@@ -64,11 +64,11 @@ def parse_planet_parameters(line, planet):
     params = line.split()
     planet.R = int(params[1])
     planet.color = params[2]
-    planet.m = int(params[3])
-    planet.x = int(params[4])
-    planet.y = int(params[5])
-    planet.Vx = int(params[6])
-    planet.Vy = int(params[7])
+    planet.m = float(params[3])
+    planet.x = float(params[4])
+    planet.y = float(params[5])
+    planet.Vx = float(params[6])
+    planet.Vy = float(params[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
