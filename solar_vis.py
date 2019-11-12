@@ -1,18 +1,18 @@
-# coding: utf-8
+﻿# coding: utf-8
 # license: GPLv3
 
 """Модуль визуализации.
 Нигде, кроме этого модуля, не используются экранные координаты объектов.
-Функции, создающие гaрафические объекты и перемещающие их на экране, принимают физические координаты
+Функции, создающие графические объекты и перемещающие их на экране, принимают физические координаты
 """
 
 header_font = "Arial-16"
 """Шрифт в заголовке"""
 
-window_width = 800
+window_width = 400
 """Ширина окна"""
 
-window_height = 800
+window_height = 400
 """Высота окна"""
 
 scale_factor = None
@@ -39,7 +39,7 @@ def scale_x(x):
     **x** — x-координата модели.
     """
 
-    return int(x*scale_factor) + window_width//2
+    return int(x * scale_factor) + window_width//2
 
 
 def scale_y(y):
@@ -53,8 +53,8 @@ def scale_y(y):
 
     **y** — y-координата модели.
     """
-
-    return y  # FIXME: not done yet
+    """Сделал также, как и с х"""
+    return int(-y * scale_factor) + window_height//2  # Исправлено
 
 
 def create_star_image(space, star):
@@ -80,7 +80,12 @@ def create_planet_image(space, planet):
     **space** — холст для рисования.
     **planet** — объект планеты.
     """
-    pass  # FIXME: сделать как у звезды
+    """Сделал  точно также, как и со дездой"""
+
+    x = scale_x(planet.x)
+    y = scale_y(planet.y)
+    r = planet.R
+    star.image = space.create_oval([x - r, y - r], [x + r, y + r], fill=planet.color)  # Исправлено 
 
 
 def update_system_name(space, system_name):
