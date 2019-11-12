@@ -39,7 +39,7 @@ def scale_x(x):
     **x** — x-координата модели.
     """
 
-    return int(x*scale_factor) + window_width//2
+    return int(x * scale_factor) + window_width//2
 
 
 def scale_y(y):
@@ -54,7 +54,7 @@ def scale_y(y):
     **y** — y-координата модели.
     """
     """Сделал также, как и с х"""
-    return int(x*scale_factor) + window_width//2  # Исправлено
+    return int(-y * scale_factor) + window_height//2  # Исправлено
 
 
 def create_star_image(space, star):
